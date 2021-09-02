@@ -1,0 +1,10 @@
+<div class="card" *ngIf="user">
+    <div class="img">
+        <img [src]='user.picture'/>
+    </div>
+    <div class="card-content">
+        <p class="name">{{user.title | titlecase }}. {{user.firstName}} {{user.lastName}}</p>
+        <p class="email">Email:  {{user.firstName | lowercase}}.{{user.lastName | lowercase}}@example.com </p>        
+        <p class="phone">Phone: {{phoneNumberRandom}} </p>
+    </div>
+</div>

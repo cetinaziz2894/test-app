@@ -1,0 +1,19 @@
+<form class="form" [formGroup]="loginForm">
+    <div class="form-control">
+        <label for="email">Email </label>
+        <input id="email" type="text" formControlName="email" placeholder="E-mail adresinizi giriniz" >    
+    </div>
+    <div class="form-control">
+        <label for="name">Şifre </label>
+        <input id="password" type="password" formControlName="password" placeholder="*****" >
+    </div>
+    <div class="form-control">
+        <a class="link" (click)="goTo('reset')">Şifremi Unuttum</a>
+    </div>
+    <div class="form-control">
+        <button type="submit" (click)="login()">Giriş Yap</button>
+    </div>
+    <div class="form-control error"  *ngIf="errorMessage">
+        <p class="error">{{errorMessage}}</p>
+    </div>
+</form>

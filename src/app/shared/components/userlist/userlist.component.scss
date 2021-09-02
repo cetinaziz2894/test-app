@@ -1,0 +1,90 @@
+@import '../../../../assets/styles/variables';
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $color-gray-light;
+    border-radius: 20px;
+    border: 1px solid $color-gray-light;
+  }
+
+.list{
+    height: inherit;
+    border-right: 1px solid $color-gray-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    .item{
+        height: inherit;
+
+        .user{
+        margin: 10px 0px;
+        }
+    }
+
+    .loader{
+        height: 700px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list-content{
+        height: 750px;
+        overflow-y: scroll;    
+    }
+
+    .list-title{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color:$color-text-dark;
+        height: auto;
+        margin: 0px 10px;
+    }
+
+    .load-more{
+        text-align: center;
+        height: auto;
+        margin: 10px;
+        height: auto;
+        a{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            color: $color-background-blue;
+            cursor: pointer;
+        }
+
+        a:hover{
+            color: $color-bachground-dark-blue;
+        }
+    }
+}
+
+@media  #{$mobile} {
+    .list{
+        border-right: none;
+        margin: 0px 10px;
+
+        .item{
+            .user{
+                margin: 0px 0px;
+            }
+        }
+
+        
+        .list-content{
+            height: 670px;    
+        }
+    }
+}

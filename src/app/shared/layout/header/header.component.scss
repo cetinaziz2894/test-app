@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/variables';
+
+.header{
+    height: 70px;
+    background-color: $color-background-gray;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    img{
+        height: 50px;
+    }
+
+    @media  #{$mobile} {
+        align-items: flex-start;
+        img{
+            margin: 0 10px;
+        }
+    }
+}

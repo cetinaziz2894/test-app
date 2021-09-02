@@ -1,0 +1,15 @@
+<form class="form" [formGroup]="resetForm" (ngSubmit)="reset()">
+    <div class="form-control">
+        <label for="email">Email </label>
+        <input id="email" type="text" formControlName="email" placeholder="E-mail adresinizi giriniz" autocomplete="false" required>    
+    </div>
+    <div class="form-control">
+        <button type="submit">Şifremi Sıfırla</button>
+    </div>
+    <div class="form-control"  *ngIf="!isValidFormSubmitted">
+        <p class="error">Email not valid.</p>
+    </div>
+    <div class="form-control">
+        <a class="link" (click)="goTo('login')">veya Giriş Yapın</a>
+    </div>
+</form>
