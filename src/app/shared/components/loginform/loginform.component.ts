@@ -24,7 +24,7 @@ export class LoginformComponent implements OnInit {
       this.errorMessage = "Email or password is not valid!"
     }else{
       if (this.loginForm.value.email === "mikro@mikro.com.tr" && this.loginForm.value.password === "123456") {
-        this.goTo('home');      
+        this.goTo('dashboard');      
       }else{
         this.errorMessage = "Email or password is wrong!"
       }
