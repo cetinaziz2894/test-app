@@ -29,12 +29,12 @@ export class UserlistComponent implements OnInit {
   }
 
   loadMore():void{
+    this.userNumber += 10;
     if(this.userNumber === 50){
-      this.isShowLoadMore = false;
+      this.isShowLoadMore =false;
+      this.getUserList(this.userNumber);
     }else{
-      this.userNumber += 10;
       this.getUserList(this.userNumber);
     }
   }
-
 }
